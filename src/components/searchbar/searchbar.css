@@ -1,0 +1,14 @@
+@import url("../../index.css");
+
+.searchbar {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input--searchbar {
+    width: 300px;
+    padding: 10px;
+}

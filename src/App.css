@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  gap: 100px;
+
+}
+
+.sidebar {
+  position: fixed;
+  right: 100px;
+}
