@@ -1,11 +1,14 @@
 import React, {useState} from "react";
 import "./searchbar.css"
 
-function SearchBar(props) {
+
+
+function SearchBar(props:{handleSearch(search:string), loading:boolean}) {
     
     const [search, setSearch] = useState("")
 
     const handleChange = (el)=>{
+        
         setSearch(el.target.value)
     }
 
@@ -14,7 +17,7 @@ function SearchBar(props) {
     return(
         <div className="searchbar">
             <input className="input--searchbar" type="search" placeholder="type to search book" value={search} onChange={handleChange} />
-            <button className="btn--searchBar" onClick={()=>props.handleSearch(search)}>Search</button>
+            <button className={`btn--searchBar ${props.loading?"disabled":""}`} onClick={()=>{search===""?alert("please type a querry to search"):props.handleSearch(search)}}>Search</button>
         </div>
     )
 }

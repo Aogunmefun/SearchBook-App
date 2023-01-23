@@ -2,7 +2,7 @@ import React, {useEffect, useContext} from "react";
 import "./results.css"
 import { WishList } from "../../App";
 
-function Results(props) {
+function Results(props:{searchResults:any[]}) {
     
     const wishList = useContext(WishList)
 

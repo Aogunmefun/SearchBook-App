@@ -10,8 +10,8 @@ function Wishlist(props) {
     
 
     return(
-        <div onClick={()=>setExpanded(!expanded)} className={`wishlist ${!expanded?"close":""}`}>
-        <h3>Wishlist <i className="material-icons">expand_more</i></h3>
+        <div  className={`wishlist ${!expanded?"close":""}`}>
+        <h3 onClick={()=>setExpanded(!expanded)}>Wishlist <i  className="material-icons">{expanded?"expand_less":"expand_more"}</i></h3>
             {
                 wishlist.wishlist.map((book,index)=>{
                     return(
